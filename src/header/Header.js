@@ -16,7 +16,7 @@ export const Header = () => {
   useEffect(() => {
     if (mobileMenuOpen) {
       const headerHeight = headerRef.current.getBoundingClientRect().height;
-      document.querySelector('.content').style.transform = `translateY(${headerHeight + 50}px)`;
+      document.querySelector('.content').style.transform = `translateY(${headerHeight + 130}px)`;
     } else {
       document.querySelector('.content').style.transform = 'translateY(0)';
     }

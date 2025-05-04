@@ -4,7 +4,7 @@ import { SKILLS } from '../../data/skills'
 export const Skills = () => {
     return (
         <div className='main'>
-            <h2>My Services</h2>
+            <h2>Skills</h2>
             <div className='skills-container'>
             {
                 SKILLS.map((item) => {
