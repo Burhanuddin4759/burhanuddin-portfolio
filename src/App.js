@@ -8,22 +8,17 @@ import { Skills } from './components/ui/Skills';
 import { Projects } from './components/ui/Projects';
 import { About } from './components/ui/About';
 
-// Home component - can create a separate file for this later
 const Home = () => {
   return (
     <div className="home-content">
-      <div>
-      <About/>
-      <Skills/>
-      <Services/>
-      <Projects/>
-      <Contact/>
-      </div>
-      <Header/>
+      <About />
+      <Skills />
+      <Services />
+      <Projects />
+      <Contact />
     </div>
   );
 };
-
 
 function App() {
   return (
@@ -37,7 +32,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} /> {/* Assuming Contact is for both about and contact */}
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
       </div>

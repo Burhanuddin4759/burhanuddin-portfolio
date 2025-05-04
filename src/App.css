@@ -1,15 +1,24 @@
+body {
+  margin: 0;
+}
+
 .App {
   display: flex;
   flex-direction: column;
-  background-color:#f9fafa;
+  background-color: #f9fafa;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
-.home-content{
-  /* display: flex; */
-  column-gap: 25px;
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
+
 .header {
   width: 100%;
-  /* background-color: blueviolet; */
   background: linear-gradient(90deg, #4c1d95, #a855f7);
   display: flex;
   padding: 10px;
@@ -17,8 +26,10 @@
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
 }
 
@@ -30,7 +41,7 @@
   text-decoration: none;
 }
 
-.burhan h2, 
+.burhan h2,
 .burhan h4 {
   margin: 5px 0;
   color: white;
@@ -64,6 +75,8 @@
 .content {
   padding: 20px;
   flex: 1;
+  margin-top: 60px; /* Base offset for fixed header */
+  transition: transform 0.3s ease-in-out; /* Animate transform */
 }
 
 .mobile-menu-button {
@@ -78,38 +91,45 @@
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
   .header {
-    padding: 10px 15px;
+    padding: 15px;
+    /* justify-content: flex-start; */
+    gap: 10px;
   }
-  
-  .mid-header, .contact {
+
+  .mid-header,
+  .contact {
     display: none;
   }
-  
+
   .mobile-menu-button {
     display: block;
   }
-  
+
   .header.mobile-active .mid-header {
     display: flex;
     position: absolute;
     top: 70px;
     left: 0;
     right: 0;
-    background-color: blueviolet;
+    background: linear-gradient(90deg, #4c1d95, #a855f7);
     flex-direction: column;
-    gap: 10px;
-    padding: 15px;
+    gap: 5px;
+    padding: 15px; /* Reduced from 15px */
     z-index: 100;
   }
-  
+
   .header.mobile-active .contact {
     display: block;
     position: absolute;
-    top: 230px;
+    top: 170px;
     left: 0;
     right: 0;
-    background-color: blueviolet;
-    padding: 15px;
+    background: linear-gradient(90deg, #4c1d95, #a855f7);
+    padding: 15px; /* Reduced from 15px */
     z-index: 100;
+  }
+
+  .header.mobile-active + .content {
+    transform: translateY(250px); /* Shift content down when menu is open */
   }
 }
