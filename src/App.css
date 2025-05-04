@@ -1,38 +1,115 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color:#f9fafa;
+}
+.home-content{
+  /* display: flex; */
+  column-gap: 25px;
+}
+.header {
+  width: 100%;
+  /* background-color: blueviolet; */
+  background: linear-gradient(90deg, #4c1d95, #a855f7);
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.burhan {
+  margin: 0;
+}
+
+.burhan a {
+  text-decoration: none;
+}
+
+.burhan h2, 
+.burhan h4 {
+  margin: 5px 0;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.mid-header {
+  display: flex;
+  gap: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.mid-header a {
+  text-decoration: none;
+}
+
+.mid-header h4 {
+  margin: 0;
+  color: white;
+  cursor: pointer;
+}
+
+.contact a {
+  text-decoration: none;
+}
+
+.contact h4 {
+  margin: 0;
+  color: white;
+  cursor: pointer;
+}
+
+.content {
+  padding: 20px;
+  flex: 1;
+}
+
+.mobile-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 10px 15px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .mid-header, .contact {
+    display: none;
+  }
+  
+  .mobile-menu-button {
+    display: block;
+  }
+  
+  .header.mobile-active .mid-header {
+    display: flex;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: blueviolet;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    z-index: 100;
+  }
+  
+  .header.mobile-active .contact {
+    display: block;
+    position: absolute;
+    top: 230px;
+    left: 0;
+    right: 0;
+    background-color: blueviolet;
+    padding: 15px;
+    z-index: 100;
   }
 }

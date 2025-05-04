@@ -1,0 +1,16 @@
+export const SKILLS = [
+        'React',
+        'React Native',
+        'React Hooks',
+        'JavaScript',
+        'TypeScript',
+        'Rest APIs',
+        'Redux',
+        'Firebase',
+        'ZegoCloud',
+        'React Query',
+        'useMutation',
+        'useContext',
+        'Redux-toolkit',
+        'Reusable Components',
+]
