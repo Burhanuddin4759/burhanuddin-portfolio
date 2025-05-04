@@ -1,8 +1,10 @@
 import React from 'react';
 import { SERVICES } from '../../data/services';
+import AnimatedSection from '../global/AnimatedSection';
 
 export const Services = () => {
   return (
+    <AnimatedSection animation="slide-left" className="services-section">
     <div className='main'>
       <h2>Services</h2>
       <div className='services-container'>
@@ -18,10 +20,12 @@ export const Services = () => {
                 </div>
                 <h5>{item.service}</h5>
               </div>
+              
             )
           })
         }
       </div>
     </div>
+    </AnimatedSection>
   )
 }

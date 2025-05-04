@@ -1,8 +1,10 @@
 import React from 'react'
 import './style.css'
+import AnimatedSection from '../global/AnimatedSection'
 
 export const About = () => {
     return (
+        <AnimatedSection animation='fade' className='about-section'>
         <div className='main'>
             <h2>About</h2>
             <p>
@@ -11,5 +13,6 @@ export const About = () => {
                 I have successfully developed a wide range of applications, including ride-booking, horoscope, story, gym, e-commerce, OpenAI-based (recipe apps), and restaurant apps. With strong proficiency in React Native, JavaScript, Redux, Firebase, and other key technologies, I am committed to delivering top-notch results for your next project.
             </p>
         </div>
+        </AnimatedSection>
     )
 }

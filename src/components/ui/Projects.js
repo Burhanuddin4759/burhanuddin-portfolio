@@ -1,9 +1,11 @@
 import React from 'react';
 import { PROJECTS } from '../../data/projects';
 import './projects.css';
+import AnimatedSection from '../global/AnimatedSection';
 
 export const Projects = () => {
     return (
+        <AnimatedSection animation="slide-left" className="services-section">
         <div className='main'>
             <h2>Projects</h2>
             <div className='projects-scroll-container'>
@@ -17,5 +19,6 @@ export const Projects = () => {
                 }
             </div>
         </div>
+        </AnimatedSection>
     );
 };
